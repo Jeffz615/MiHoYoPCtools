@@ -135,7 +135,7 @@ def main():
         tkinter.messagebox.showerror(
             title='Error', message='Width/Height Error.')
         return
-    if widthNum != regeditJson['width'] or heightNum != regeditJson['height'] or isfullScreen != regeditJson['isfullScreen']:
+    if widthNum != regeditJson['width'] or heightNum != regeditJson['height'] or isfullScreen != regeditJson['isfullScreen'] or frame1 != regFrame['TargetFrameRateForInLevel'] or frame2 != regFrame['TargetFrameRateForOthers']:
         value = bytes(json.dumps({'width': widthNum, 'height': heightNum,
                                   'isfullScreen': isfullScreen}), encoding='utf-8') + endByte
         regFrame['TargetFrameRateForInLevel'] = frame1
